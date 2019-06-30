@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
+  "scripts":{
+    "start": "echo node index.js"
+  },
   "dependencies": {
     "bcrypt": "^3.0.6",
     "cookie-parser": "^1.4.4",
