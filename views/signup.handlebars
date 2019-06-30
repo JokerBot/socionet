@@ -1,0 +1,46 @@
+
+{{!-- 
+<form id="signup-form" action="/users/signup" method="post">
+  <input type="text" name="display_name" placeholder="display name">
+  <input type="text" name="email" placeholder="email">
+  <input type="password" name="account_key" placeholder="enter a password">
+  <button type="submit"  class="btn btn-primary">Submit</button>
+</form>
+
+
+<p>Already a user?<a href="/">login here</a></p> --}}
+
+
+<div id="signup-form-div">
+    <div class="card">
+        <div class="card-body">
+
+        <form id="signup-form" action="/users/signup" method="post">
+                <p class="h4 text-center py-4">Sign up</p>
+
+                <div class="md-form">
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" name="display_name" class="form-control" placeholder="display name">
+                </div>
+
+                <div class="md-form">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" name="email" class="form-control" placeholder="email">
+                </div>
+
+            
+                <div class="md-form">
+                    <i class="fa fa-lock prefix grey-text"></i>
+                    <input type="password" name="account_key" class="form-control" placeholder="password">
+                </div>
+
+                <div class="text-center py-4 mt-3">
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                </div>
+                <div>
+                    <p>Already a user?<a href="/">login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

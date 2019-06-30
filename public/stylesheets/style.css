@@ -1,0 +1,122 @@
+
+
+body{
+  /* background-image: url("/images/back-img.jpg"); */
+  background-color: #b8c6d6;
+}
+
+#signup-form-div,
+#login-form-div{
+margin-top: 50px;
+margin-bottom: 30px;
+}
+
+
+.post-status-form{
+margin-top: 50px;
+background-color: #4285f4;
+padding: 10px;
+border-radius:4px;
+}
+
+.post-status-form .submit{
+  background-color: #fff !important;
+  color: #4285f4 !important;
+  height: 40px;
+  width: 110px;
+  border-radius: 5px;
+  margin-right: 0;
+}
+p{
+  word-break: break-all;
+}
+
+.hidden{
+  display:none !important;
+}
+
+.add-comment-box{
+  border-radius:20px;
+}
+
+.add-comment-button{
+  float:right;
+}
+
+.card-new-status .card-body{
+  padding-bottom:0px !important;
+}
+
+.card-new-status textarea,
+.add-comment-box{
+  background-color: #e6ecf0;
+}
+
+[class='toggle-heart'] {
+  position: absolute;
+  left: -100vw;
+}
+
+[for='toggle-heart'] {
+  color: #aab8c2;
+}
+
+.heart-checked{
+  color: #e2264d;
+}
+
+[for='toggle-heart'] {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.status-profile-img{
+height: 51px;
+border-radius: 50%;
+}
+
+
+#all-status{
+  margin-top: 50px;
+  margin-bottom: 100px !important;
+}
+
+.fixed{
+  position:fixed;
+  top:8px;
+  z-index:100;
+
+}
+.comments-div{
+  padding: 10px;
+}
+
+textarea {
+  resize: none;
+}
+.nav-menu{
+  font-weight:700;
+}
+
+
+/*  RESPONSIVE */
+@media only screen and (min-width: 740px) {
+  #body-content {
+    width: 60%;
+    margin-left: 20%;
+  }
+  
+}
+
+@media only screen and (max-width: 739px) {
+  #body-content {
+    margin-left:10px !important;
+    margin-right: 10px !important;
+
+  }
+
+  #signup-form-div,
+  #login-form-div{
+    margin-top: 30px;
+  }
+  
+}

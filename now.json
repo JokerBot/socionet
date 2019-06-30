@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "socionet",
+  "builds": [
+    { "src": "public/*", "use": "@now/static" },
+    { "src": "index.js", "use": "@now/node" }
+  ]
+}

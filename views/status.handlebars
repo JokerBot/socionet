@@ -1,0 +1,141 @@
+
+<div class="status-detail-div">
+    <div class="status-detail card card-comments mb-3 wow fadeIn mt-5 post-status" data-status-id="{{status.status_id}}">
+        <div class="card-body">
+            <div class="media">
+                <div>
+                    <img class="d-flex mb-3 mr-3 status-profile-img" src="https://mdbootstrap.com/img/Photos/Avatars/img (30).jpg" alt="Generic placeholder image">
+                </div>
+                <div>
+                    <b class="mt-0">{{status.Account.display_name}}</b>
+                    <p>{{status.content}}</p>
+                    <input class="toggle-heart" type="checkbox" />      
+                    {{#if status.current_user_liked}}
+                    <label for="toggle-heart" class="heart-checked">❤</label><span class='no-of-favourites' data-no-of-favourites="{{status.no_of_favourites}}">{{status.no_of_favourites}}</span>
+                    {{else}}
+                    <label for="toggle-heart">❤</label><span class='no-of-favourites' data-no-of-favourites="{{status.no_of_favourites}}">{{status.no_of_favourites}}</span>
+                    {{/if}}
+                    <a href="javascript:viod(0);"><span class="ml-3">Comments(3)</span></a>
+                </div>
+            </div> 
+            <div id="comment" class="mb-4 mt-4">
+                <div class="d-flex">
+                    <input id="add-comment-box" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg" placeholder="add a comment">
+                    <button class="btn btn-primary" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments-div card card-comments mb-4" style="padding:10px;">
+        
+        <div class="all-comments">   
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="post-status" data-status-id="{{status.status_id}}">
+                <div class="media">
+                    <div>
+                        <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                    </div>
+                    <div class="text-wrap">
+                        <b>javeed</b>
+                        <p>asasas</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        
+    </div>
+</div>
+
+<script src="/javascripts/favourites.js"></script>

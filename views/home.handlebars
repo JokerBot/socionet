@@ -1,0 +1,139 @@
+
+  {{#if authenticated}}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-new-status mb-3 wow fadeIn mt-5 ">
+                    <div class="card-body">
+                        <div class="media">
+                            <div>
+                                <img class="d-flex mb-3 mr-3 status-profile-img" src="https://mdbootstrap.com/img/Photos/Avatars/img (30).jpg" alt="Generic placeholder image">
+                            </div>
+                            <div class="w-100 form-group shadow-textarea">
+                                <b class="mt-0 mb-1">{{user.display_name}}</b>
+                                <form action="/status" method="post">
+                                        <textarea name="content" class="mt-2 form-control"  rows="3" placeholder="Write something here..."></textarea>
+                                        <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary mt-3 submit">Share</button>
+                                        </div>
+                                </form>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div id="all-status">
+                    {{#each statuses}}
+                        <div class="card card-status mb-3 wow fadeIn post-status" data-status-id="{{status_id}}">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div>
+                                        <img class="d-flex mb-3 mr-3 status-profile-img" src="https://mdbootstrap.com/img/Photos/Avatars/img (30).jpg" alt="Generic placeholder image">
+                                    </div>
+                                    <div>
+                                        <b class="mt-0">{{Account.display_name}}</b>
+                                        {{#contains Account.display_name ""}}
+                                        yes
+                                        {{else}}
+                                        no
+                                        {{/contains}}
+                                        <p>{{content}}</p>
+                                        <input class="toggle-heart" type="checkbox" />      
+                                        {{#if current_user_liked}}
+                                        <label for="toggle-heart" class="heart-checked">❤</label><span class='no-of-favourites' data-no-of-favourites="{{Favourites.length}}">{{Favourites.length}}</span>
+                                        {{else}}
+                                        <label for="toggle-heart">❤</label><span class='no-of-favourites' data-no-of-favourites="{{Favourites.length}}">{{Favourites.length}}</span>
+                                        {{/if}}
+                                        {{!-- <a href="/status/{{id}}"><span class="ml-3">Comments(3)</span></a> --}}
+                                        <span class="ml-3 show-comments data-total">Comments(<span data-total-comments="{{Comments.length}}" class="total-comments">{{Comments.length}}</span>)</span></a>
+
+                                    </div>
+                                </div>
+                                </hr>
+                                <div class="comments-section hidden">
+                                    <div class="all-comments"> 
+                                        {{#each Comments}}  
+                                        <div class="post-status" data-status-id="{{status.status_id}}">
+                                            <div class="media">
+                                                <div>
+                                                    <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <b>{{Account.display_name}}</b>
+                                                    <p>{{content}}</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        {{/each}}
+                                    </div>
+                                   <div class="add-comment-div md-form amber-textarea active-amber-textarea">
+                                        <textarea class="add-comment-box md-textarea form-control" rows="1" placeholder="add comment .."></textarea>
+                                        <div>
+                                            <button type="button" class="add-comment-button btn btn-primary">Add comment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js"></script>
+<script>
+    
+</script>
+    {{!-- <script id="comment-template" type="text/x-handlebars-template">
+        <div class="post-status" data-status-id="{{name}}">
+            <div class="media">
+                <div>
+                    <img class="mr-3 status-profile-img" alt="Bootstrap Media Preview" src="https://www.layoutit.com/img/sports-q-c-64-64-8.jpg" />
+                </div>
+                <div class="text-wrap">
+                    <b>{{name}}</b>
+                    <p>{{{name}}}</p>
+                    {{json name}}
+                </div>
+            </div>
+        </div> 
+    </script> --}}
+ 
+
+    
+
+    <script src="/javascripts/favourites.js"></script>
+    <script src="/javascripts/comments.js"></script>
+       
+    
+  {{else}}
+   
+<div id='login-form-div'>
+    <div class="card">
+        <div class="card-body">
+            <form id="login-form" action="/users/login" method="post">
+                <p class="h4 text-center py-4 ">Login</p>
+                <div class="md-form">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email"class="form-control" name="email" placeholder="email">
+                </div>
+                <div class="md-form">
+                    <i class="fa fa-lock prefix grey-text"></i>
+                    <input type="password" class="form-control" name="account_key" placeholder="password">
+                </div>
+                <div class="text-center py-4 mt-3">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                </div>
+                <div>
+                    <p>new user?<a href='/users/signup'>create a new account</a><p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+
+        
+  {{/if}}
